@@ -1,4 +1,4 @@
-package controller
+package main
 
 import (
 	"io/ioutil"
@@ -14,7 +14,7 @@ func Index(c echo.Context) error {
 
 // GetApp2 get data from app2
 func GetApp2(c echo.Context) error {
-	res, err := http.Get("http://localhost:3000")
+	res, err := http.Get("http://127.0.0.1:3000")
 	if err != nil {
 		return c.String(500, err.Error())
 	}
